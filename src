@@ -1,0 +1,56 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Dados fornecidos
+data = {
+    'Número de Focos de Incêndio': [3000],
+    'Área Afetada (hectares)': [181000],
+    'Prejuízo Estimado (R$)': [1200000000],
+    'Custo de Renovação por Hectare (R$)': [13500]
+}
+
+# Criação do DataFrame
+df = pd.DataFrame(data)
+
+# Cálculo do Custo Total de Renovação
+df['Custo Total de Renovação (R$)'] = df['Área Afetada (hectares)'] * df['Custo de Renovação por Hectare (R$)']
+
+# Visualização dos Dados
+plt.figure(figsize=(12, 6))
+
+# Gráfico de barras dos dados principais
+plt.subplot(1, 2, 1)
+sns.barplot(x=list(df.columns[0:3]), y=df.iloc[0, 0:3])
+plt.title('Dados Principais sobre Queimadas')
+plt.ylabel('Valor (R$)')
+plt.xticks(rotation=45)
+
+# Gráfico de comparação de Prejuízo e Custo de Renovação
+plt.subplot(1, 2, 2)
+bar_width = 0.35
+index = range(2)
+bar1 = plt.bar(index, df['Prejuízo Estimado (R$)'], bar_width, label='Prejuízo Estimado')
+bar2 = plt.bar([i + bar_width for i in index], df['Custo Total de Renovação (R$)'], bar_width, label='Custo de Renovação')
+
+plt.xlabel('Indicadores')
+plt.ylabel('Valor (R$)')
+plt.title('Prejuízo Estimado vs. Custo de Renovação')
+plt.xticks([i + bar_width / 2 for i in index], ['Prejuízo Estimado', 'Custo de Renovação'])
+plt.legend()
+
+plt.tight_layout()
+plt.show()
+
+# Relatório de Análise
+print("Relatório de Análise:")
+print(f"Área Total Afetada: {df['Área Afetada (hectares)'][0]} hectares")
+print(f"Prejuízo Estimado: R$ {df['Prejuízo Estimado (R$)'][0]:,.2f}")
+print(f"Custo Total de Renovação: R$ {df['Custo Total de Renovação (R$)'][0]:,.2f}")
+
+# Dicas
+print("\nDicas:")
+print("1. Para melhorar a análise, considere obter dados sobre a quantidade de cana colhida antes e depois dos incêndios.")
+print("2. Utilize técnicas de modelagem preditiva para estimar os impactos futuros com base em condições climáticas.")
+print("3. Explore dados adicionais sobre o tipo e intensidade dos incêndios para uma análise mais detalhada.")
+print("4. Considere a inclusão de dados sobre medidas de recuperação e seus custos para uma visão mais completa do impacto econômico.")
