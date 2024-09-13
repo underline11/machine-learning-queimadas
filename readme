@@ -1,0 +1,83 @@
+# Análise dos Impactos das Queimadas em Áreas de Canaviais em São Paulo
+
+## Descrição
+
+Este projeto em Python tem como objetivo analisar os dados relacionados às queimadas em áreas de cana-de-açúcar no Estado de São Paulo. O foco é identificar padrões e calcular prejuízos causados pelas queimadas, gerando visualizações e insights sobre o impacto econômico. Utiliza-se dados sobre focos de incêndio, áreas afetadas e estimativas de prejuízos para avaliar o impacto nas áreas de canaviais.
+
+## Dados
+
+Os dados analisados incluem:
+- **Número de Focos de Incêndio:** 3.000
+- **Área Afetada (hectares):** 181.000
+- **Prejuízo Estimado:** R$ 1.200.000.000
+- **Custo de Renovação por Hectare:** R$ 13.500
+
+## Objetivos
+
+1. **Leitura e Processamento dos Dados:** Carregar e preparar os dados para análise.
+2. **Análise Exploratória:** Examinar os dados para compreender o impacto das queimadas.
+3. **Visualização dos Dados:** Criar gráficos para ilustrar a extensão dos danos e os prejuízos financeiros.
+4. **Cálculo de Prejuízos e Custos:** Estimar o custo total de renovação dos canaviais e compará-lo com os prejuízos estimados.
+5. **Relatório:** Gerar um relatório com conclusões e recomendações com base na análise.
+
+## Estrutura do Projeto
+
+- `analyze_burns.py`: Script principal para análise dos dados, visualização e cálculo dos prejuízos.
+- `data/`: Diretório para armazenar os dados brutos (não incluídos neste repositório).
+- `results/`: Diretório para armazenar os resultados e gráficos gerados pela análise.
+- `README.md`: Este arquivo.
+
+## Requisitos
+
+- Python 3.8 ou superior
+- Bibliotecas Python:
+  - `pandas`
+  - `matplotlib`
+  - `seaborn`
+
+## Como Executar
+
+1. Clone o repositório:
+    ```bash
+    git clone https://github.com/seu-usuario/seu-repositorio.git
+    ```
+
+2. Navegue até o diretório do projeto:
+    ```bash
+    cd seu-repositorio
+    ```
+
+3. Instale as bibliotecas necessárias:
+    ```bash
+    pip install pandas matplotlib seaborn
+    ```
+
+4. Execute o script de análise:
+    ```bash
+    python analyze_burns.py
+    ```
+
+5. Verifique o diretório `results/` para os gráficos e o relatório gerado.
+
+## Relatório
+
+O script gera um relatório com as seguintes informações:
+- Área total afetada pelos incêndios.
+- Prejuízo estimado.
+- Custo total de renovação dos canaviais.
+- Gráficos comparativos e de visualização dos dados.
+
+## Dicas
+
+1. **Dados Adicionais:** Considere adicionar dados sobre a quantidade de cana colhida antes e após os incêndios para uma análise mais detalhada.
+2. **Modelagem Preditiva:** Explore técnicas de modelagem preditiva para prever futuros impactos com base em condições climáticas.
+3. **Dados Adicionais sobre Incêndios:** Inclua informações sobre o tipo e intensidade dos incêndios, se disponíveis.
+4. **Medidas de Recuperação:** Analise os custos associados às medidas de recuperação para entender melhor o impacto econômico.
+
+## Licença
+
+Este projeto está licenciado sob a [Licença MIT](LICENSE).
+
+## Contato
+
+Para mais informações, entre em contato com [seu-email@dominio.com](mailto:seu-email@dominio.com).
