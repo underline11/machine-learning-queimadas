@@ -1,0 +1,49 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.pyd
+*.db
+*.sqlite3
+*.env
+*.venv
+*.virtualenv
+*.idea/
+*.vscode/
+*.pytest_cache/
+*.coverage
+*.tox/
+*.nox/
+*.hypothesis/
+*.mypy_cache/
+*.dmypy.json
+*.pytest_cache/
+*.coverage
+*.tox/
+*.nox/
+*.hypothesis/
+*.mypy_cache/
+*.dmypy.json
+*.tox/
+*.coverage
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Logs
+*.log
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Data
+data/
+results/
+
+# Environment
+.env
+venv/
+.env/
+*.env
